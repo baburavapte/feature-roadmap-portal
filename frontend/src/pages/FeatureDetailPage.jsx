@@ -326,6 +326,7 @@ const FeatureDetailPage = () => {
             <span className="header-title">Feature Roadmap Portal</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+            <Link to="/roadmap" className="btn btn--ghost btn--sm">Roadmap</Link>
             <Link to="/features" className="btn btn--ghost btn--sm">← Back to Feed</Link>
             {user && (
               <button className="btn btn--sm"

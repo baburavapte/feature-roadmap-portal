@@ -10,6 +10,7 @@ import ResetPasswordPage from './pages/ResetPasswordPage';
 import VerifyEmailPage from './pages/VerifyEmailPage';
 import FeatureFeedPage from './pages/FeatureFeedPage';
 import FeatureDetailPage from './pages/FeatureDetailPage';
+import RoadmapPage from './pages/RoadmapPage';
 import './index.css';
 
 // ─── Task 1 Dashboard (preserved exactly, wrapped in layout) ──────────────────
@@ -75,6 +76,7 @@ function Dashboard() {
             <span className="header-title">Feature Roadmap Portal</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
+            <Link to="/roadmap" className="btn btn--ghost btn--sm">Roadmap</Link>
             {getStatusBadge()}
             {user && (
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
@@ -295,6 +297,7 @@ function App() {
       {/* Feature requests (public feed, auth optional) */}
       <Route path="/features" element={<FeatureFeedPage />} />
       <Route path="/features/:id" element={<FeatureDetailPage />} />
+      <Route path="/roadmap" element={<RoadmapPage />} />
 
       {/* Protected system dashboard (Task 1) */}
       <Route

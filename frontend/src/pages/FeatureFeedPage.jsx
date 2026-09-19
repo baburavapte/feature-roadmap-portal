@@ -256,6 +256,7 @@ const FeatureFeedPage = () => {
             </div>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+            <Link to="/roadmap" className="btn btn--ghost btn--sm">Roadmap</Link>
             {user ? (
               <>
                 <span style={{ fontSize: 13, color: 'var(--text-secondary)' }}>{user.name}</span>
