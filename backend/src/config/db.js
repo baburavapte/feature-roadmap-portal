@@ -1,4 +1,8 @@
 import mongoose from 'mongoose';
+import dns from 'node:dns';
+
+// Fix for Node.js DNS resolution issues on Windows for SRV records
+dns.setServers(['1.1.1.1', '1.0.0.1']);
 
 const MAX_RETRIES = 5;
 const RETRY_DELAY_MS = 3000;
